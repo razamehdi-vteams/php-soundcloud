@@ -36,6 +36,8 @@ class SoundCloud
 	protected $clientSecret;
 
     /**
+     * SoundCloud app Redirect URL.
+     *
      * @var string
      */
     protected $redirectUri;
@@ -48,16 +50,22 @@ class SoundCloud
     protected $accessToken;
 
     /**
+     * SoundCloud API request URL.
+     *
      * @var string
      */
     protected $apiUrl;
 
     /**
+     * Collection object containing SoundCloud request data.
+     *
      * @var \Illuminate\Support\Collection
      */
     protected $request;
 
     /**
+     * SoundCloud API request headers.
+     *
      * @var array
      */
     protected $headers;
