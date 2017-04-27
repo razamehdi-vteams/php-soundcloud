@@ -1,0 +1,27 @@
+{
+  "name": "symphonic/soundcloud",
+  "type": "library",
+  "description": "Simple API wrapper for Soundcloud to be used in PHP applications.",
+  "keywords": ["http", "rest", "web service", "soundcloud", "php soundcloud"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Raza Mehdi",
+      "email": "raza.sds@nxvt.com"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "Symphonic\\SoundCloud\\": "src/"
+    }
+  },
+  "require": {
+    "illuminate/support": "~5.0|~5.1|~5.2|~5.3|~5.4",
+    "guzzlehttp/guzzle": "~5.0|~6.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
