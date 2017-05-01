@@ -159,14 +159,15 @@ class SoundCloud
         $this->headers['Authorization'] = 'OAuth '.$token;
     }
 
+    /**
+     * Upload track to SoundCloud.
+     *
+     * @param array $data
+     * @return mixed
+     */
     public function uploadTrack($data)
     {
-        $post = [];
-        foreach ($data as $key => $value) {
-            $post['track['.$key.']'] = $value;
-        }
-
-        $this->setupRequest($post);
+        $this->setupRequest($data);
 
         $this->apiUrl = $this->buildRequestUrl('tracks');
 
