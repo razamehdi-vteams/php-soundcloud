@@ -108,6 +108,26 @@ class SoundCloud
     }
 
     /**
+     * Login into SoundCloud using username & password.
+     *
+     * @param string $username
+     * @param string $password
+     * @return mixed
+     */
+    public function login($username, $password)
+    {
+        $this->setupRequest([
+            'username'      =>  $username,
+            'password'      =>  $password,
+            'grant_type'    =>  'password',
+        ], ['redirect_uri']);
+
+        $this->apiUrl = $this->buildRequestUrl('oauth2/token');
+
+        return $this->doSoundCloudRequest('post');
+    }
+
+    /**
      * Get access token from SoundCloud API.
      *
      * @param string $code
